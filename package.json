@@ -1,0 +1,16 @@
+{
+  "name": "devhytale.com",
+  "version": "1.0.0",
+  "private": "true",
+  "scripts": {
+    "dev": "npx tsx --watch src/server.ts",
+    "build": "tsc --skipLibCheck",
+    "start": "node dist/src/server.js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.15"
+  }
+}

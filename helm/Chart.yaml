@@ -1,0 +1,5 @@
+apiVersion: v2
+name: devhytale.com
+description: Development library and resources for Hytale
+version: 0.1.0
+appVersion: "1.0.0"
