@@ -42,6 +42,10 @@ const members = [
 
 Hello, I'm Timothy! As long as this introduction page exists, you can assume this is mostly a solo project (although I'd love to involve the larger community if people actually find this useful). I'm not exactly sure what I'm making here, the plan is to just start documenting the things I learn and then go from there.
 
+### Why this site could be useful to you
+
+There are definitely a lot of sites out there pumping out documentation and guides, and they definitely have their use case (I'm using them myself to learn about modding Hytale). This site is somewhat on the other end of the spectrum, where I'll be producing a lot less content and trying to make sure that content is helpful. I can't guarantee it will be helpful to everyone, but the idea is that if I found it helpful, maybe you will too.
+
 ## Team
 
 <VPTeamMembers size="small" :members="members" />
