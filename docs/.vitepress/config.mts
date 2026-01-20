@@ -14,14 +14,14 @@ export default defineConfig({
 
     sidebar: {
       '/getting-started/': [
-        { text: 'Hi', link: '/getting-started/' },
-        // {
-        //   text: 'Commands',
-        //   collapsed: false,
-        //   items: [
-        //     { text: 'Markdown Examples', link: '/getting-started/markdown-examples' },
-        //   ]
-        // }
+        { text: 'Getting Started', link: '/getting-started/' },
+        {
+          text: 'Commands',
+          collapsed: false,
+          items: [
+            { text: 'Overview', link: '/getting-started/commands' },
+          ]
+        }
       ]
     },
 
