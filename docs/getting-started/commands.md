@@ -1,8 +1,81 @@
 # Command Commentary
+I'm not 100% finished but I've looked through source/game and tested almost all the commands that exist. I've grouped them together and added commentary that might (or might not) help you better understand what commands would be useful to you. If you find an inaccuracy in any of this (typos, missing commands, wrong information), please create an issue on the GitHub and I'll do my best to correct it!
 
-I think the next step after finishing filling this out is to group the commands by type (mostly already done by the Owner property which I'll remove later) in order to cleanly present to people the commands they should check out.
+> [!NOTE]
+> If you see this and happen to be a Hytale Developer (or know one), I've compiled a list of bugs at the bottom of this page relating to commands.
+
+### Aside: Macros
+I have yet to put aside the time to figure out exactly what macros exist/whether or not I have mixed some into this list, but at the very least I know they exist as I use `/noon` regularly (set time to noon and toggles time cycle).
+
+## Utility
+| Command | Commentary |
+| --- | --- |
+| /tp | Teleport a player to a location or other player. |
+| /gamemode | Switching a player's gamemode. |
+| /sudo | Execute a command as another player. |
+| /help | UI command manual. |
+| /stop | Shuts down the server. |
+| /auth | Manages authentication for the server. |
+| /warp | A way to set manage locations to teleport to. |
+| /say | Broadcasts message to server. |
+| /toggleblockplacementoverride | Enable or disable block plavement override. |
+| /plugin | Command for managing plugins. |
+
+## Server Administration
+| Command | Commentary |
+| --- | --- |
+| /kick | Kick the specified player. |
+| /ban | Ban the specified player (by UUID). |
+| /unban | Unban the specified player. |
+| /whitelist | Manage whitelist. |
+| /op | Manage server operators. |
+| /maxplayers | Sets the maximum allows players (modifies ) |
+| /give | Give an item to a player. |
+| /player | Manage other players (stats, effects, camera, etc.). |
+| /inventory | Manage player inventories. |
+| /memories | Manage player memories. |
+| /kill | Kill the specified player. |
+
+## World Management
+| Command | Commentary |
+| --- | --- |
+| /block | Everything for managing blocks. |
+| /chunk | Everything for managing chunks. |
+| /world | Everything for managing worlds. |
+| /entity | Everyting for managing entities. |
+| /npc | Everything for managing NPCs. |
+| /spawning | Related to the spawning of NPCs. 
+| /worldmap | Everything for managing the world map. |
+| /instances | Everything for managing instances. |
+| /time | Sets the time for a world. ||
+| /spawn | Teleport or set the world spawn. |
+| /weather | Manage the weather. |
+
+## Info
+| Command | Commentary |
+| --- | --- |
+| /whereami | Get current location of a player. |
+| /whoami | Get basic info about a player. |
+| /who | Get your name and displayname (ONLY WORKS ON YOU). |
+| /version | Get the current server version. |
+| /ping | Get the ping for a player. |
+| /server | Get performance information about the server. |
+| /commands | Dumps all commands into file on server .|
+| /packs | Lists all loaded asset packs. |
+| /packetstats | Gets statistics about a given packet. |
+
+## Singleplayer
+| Command | Commentary |
+| --- | --- |
+| /play | Single player only command for toggling multiplayer modes. |
+| /landiscovery | Toggles lan discovery. |
+| /hub | Used in the singleplayer "Creative" type world (server) to go back to the hub world (game world). |
 
 ## Building
+
+> [!WARNING]
+> I haven't finished going over this category of commands yet, so the commentary is incomplete and the commands could be miscategorized.
+
 | Command | Commentary |
 | --- | --- |
 | /tint | Tints the selection a certain color (pass a hex value like `#000000`) |
@@ -45,156 +118,92 @@ I think the next step after finishing filling this out is to group the commands 
 | /undo |  |
 | /importimage |  |
 | /selectionhistory |  |
-<!-- Leaving a gap here for the moment to show the divide between the things categorized as builder tools and the ones not to see how similar they are before merging -->
-| /fluid | Can be used to spawn a lot of fluid |
-
-## Assets
-| Command | Commentary |
-| --- | --- |
-| /model | Open change player model UI |
-| /update | Updating assets and prefabs via git. Haven't tested it. |
-
-## Utility
-| Command | Commentary |
-| --- | --- |
-| /tp | Teleport a player to a location or other player |
-| /gamemode | Switching a player's gamemode |
-| /sudo | Execute a command as another player |
-| /help | UI command manual |
-| /stop |  |
-| /auth | Manages authentication for the server |
-| /backup |  |
-| /warp | A way to set manage locations to teleport to |
-| /say | Broadcasts message to server |
-| /toggleblockplacementoverride | Enable or disable block plavement override |
-| /plugin | Command for managing plugins |
-
-## Player Management
-| Command | Commentary |
-| --- | --- |
-| /ban | Does proper account lookup so all bans are based on account and not name; also only works on real accounts |
-| /whitelist | Manage whitelist |
-| /kick | Kick a player |
-| /unban | Unban command |
-| /op | Add/remove server operators |
-| /recipe | Manage recipies a player knows |
-| /maxplayers | Sets the maximum allows players |
-| /kill | Kill a player |
-| /inventory | Managing player inventories |
-| /give | Give an item to a player |
-| /player | Command for viewing info about and modifying the player. Also has some camera modifications. |
-| /memories | Command for managing a player's memories |
-
-## World Management
-| Command | Commentary |
-| --- | --- |
-| /time | Sets the time for a world |
-| /block | Block getting, setting, debugging, and some WorldEdit-esk operations as well |
-| /world | Everything for managing worlds |
-| /particle |  |
-| /chunk | Similar to block command but for chunks; info/debugging/regenerating |
-| /npc |  |
-| /spawning | Related to the spawning of NPCs |
-| /spawn | Teleport or setthe world spawn |
-| /setticking | Toggle on or off world ticking |
-| /worldgen | Benchmarking command and worldgen config reload command. Guessing the worldgen reload might be needed when working on custom world generation? |
-| /worldmap | World map related settings |
-| /weather | Manage the weather |
-| /instances | Everything instance related. Not sure exactly what instances are but they seem like copies of worlds? |
-| /entity | Everyting entity related. Did not test. |
-| /spawnitem | Spawns in an item to the world |
-
-## Info
-| Command | Commentary |
-| --- | --- |
-| /whereami | Get current location of a player |
-| /who |  |
-| /version |  |
-| /whoami |  |
-| /ping | Get the ping for a player |
-| /server |  |
-| /commands | Dumps all commands into file on server |
-| /packs | Lists all loaded asset packs |
-| /debugplayerposition | Prints pos, rot, head rot, and some tp information; spawns a "blue debug thingy" at your position. |
 
 ## Test Behaviors
 | Command | Commentary |
 | --- | --- |
-| /eventtitle | Debug command to send a title to all players |
-| /notify | Send a notification to all players |
-| /mount | Dismount or check mount status |
-| /cursethis | Curses or un-curses the item in your hand. No idea what this does. |
-| /camshake | Apply effects to the camera |
-| /refer | Initiates a server transfer |
-| /damage | Deals damage to a player |
-| /sound | Opens play sound UI |
-| /network | Simlated network latency |
-| /hitdetection | Toggle on hitboxes for hit detection for attacks |
+| /hitdetection | Toggle on hitboxes for hit detection for attacks. |
+| /eventtitle | Debug command to send a title to all players. |
+| /notify | Send a notification to all players. |
+| /mount | Dismount or check mount status. |
+| /cursethis | Curses or un-curses the item in your hand. Cursed items are removed from the player if they die in a fragment (possibly also when they leave a fragment but this kicks me atm). |
+| /camshake | Apply effects to the camera. |
+| /refer | Initiates a server transfer. |
+| /damage | Deals damage to a player. |
+| /sound | Plays a sound to the player/opens play sound UI. |
+| /model | Set/reset a player's model/open change player model UI. |
+| /particle | Opens particle spawning UI. |
+| /network | Simlated network latency. |
 | /hide | Hide/show players from everyone or specifically another player. |
 | /droplist | Simulate drops from droplists assets. |
-
-## Redundant
-| Command | Commentary |
-| --- | --- |
-| /buildertoolslegend | Same thing as builder tools keybind |
-
-## Debug/Useless
-| Command | Commentary |
-| --- | --- |
-| /wait | Wait a specified amount of time. No idea what this might be used for |
-| /emote | Plays an animation? Right now there is a short list of 5 allowed ones |
-| /hub | Something related to the CreativeHub instance only probably |
-| /validatecpb | Literally crashed my client |
-| /sleep | Appears to test consecutive short sleep calls |
-| /messagetest | Appears to test something about messages |
-| /viewport | Literally no idea creating a viewport seems to regenerate chunks. |
-| /hudtest | Test that hides the hotbar |
-| /pidcheck | Check if a process with a given id is running |
-| /echo | Echos the input text |
-| /log | Set log levels |
-| /tagpattern | Seems like a debug command for testing stuff that probably doesn't matter to modders |
-| /packetstats | Seems ilke largely unhelpful packet information |
-| /hitboxcollision | The help appears to indicate this allows you to attach a HitboxCollisionConfig asset to an entity |
-| /ambience | Manage ambient sound and music |
-| /debug | Seems to just draw useless debug shapes at the players location, but `/debug shape showforce` seems potentially useful |
-| /spawnblock | Spawns a block it looks like as an entity at the specified location. DO NOT USE IF YOU MISSPELL THE BLOCK IT WILL CRASH THE WORLD |
-| /editprefab | This command seems buggy as hell and is just less functional than /prefab. |
-| /interaction | Run interactions like attack, use, abilities, etc. Some of them error out "no root interaction" and others disconnect you. |
+| /debug | Mostly useless dev tool that draws debug shapes at the players location, but `/debug shape showforce` seems like a useful tool to show applied velocities. |
 | /networkchunksending | Toggle on/off whether you should receive chunks from the server. |
-| /perm | Permissions management although I assume LuckPerms will be a cleaner way to do this |
-| /path | Control npc pathing. Did not test |
 | /objective | Mostly seems like a dev tool for managing player objectives. |
-| /stresstest | Stress tests the server. Couldn't get this to work but seems like it could be helpful |
-| /lighting | For getting and changing the lighting system. Can't get this to do anything. |
+| /itemstate | Takes the players currently held item and applys the argument as the item's state. |
+| /fragment | Adjusts the fragment timer for a fragment world. |
+| /leave | Leaves the fragment world. It seems like there are currently some issues leaving the fragment world so this command sometimes disconnects the player (same as leaving through the portal though). |
+| /fluid | Can be used to spawn a lot of fluid. |
+| /recipe | Mange recipies a player knows. |
+| /setticking | Toggle on or off world ticking. |
+| /spawnitem | Spawns in an item to the world. |
+
+## Mostly Useless
+| Command | Commentary |
+| --- | --- |
 | /prefabspawner | Dev command for getting and setting data for prefab spawner blocks which can already be done via interacting. |
+| /perm | Simple permissions management command, although I would strongly recommend using [LuckPerms](https://www.curseforge.com/hytale/mods/luckperms) instead. |
 | /blockspawner | Unlike prefab spawners, block spawners don't appear to have a ui yet, but I can't get them to do anything for that matter. |
 | /convertprefabs | Helps in updating prefabs. Presumably useful but the game just came out so not sure. |
-| /itemstate | Sets the state of the currently held item but gives no indication of how to do that |
 
-## Probably not relevant to most people
+## Development Tools (Probably Useless)
 | Command | Commentary |
 | --- | --- |
-| /play | Single player only command for multiplayer gameplay |
-| /landiscovery |  |
+| /log | Set log levels of loggers. |
+| /wait | Wait a specified amount of time. Doesn't seem to do anything else, probably a dev tool. |
+| /sleep | Test consecutive short sleep calls, or adjusts TickingThread.SLEEP_OFFSET (not sure what this does). Probably a dev tool. |
+| /emote | Plays an animation? Right now I can barely get it to work on any assets and it plays the emote for such a short duration I assume the command is a dev tool. |
+| /validatecpb | Literally crashed my client, command name and description sound like a dev tool. |
+| /messagetest | Dev tool that tests something about translation params (internal way of handling messages with params in different languages). |
+| /hudtest | Dev tool that toggles the hotbar visibility. |
+| /pidcheck | Dev tool that checks if a process with a given id is running. The singleplayer flag when passed literally just makes the command tell you singleplayer isn't supported, which itself has a typo that says it "only works in singleplayer". :skull: |
+| /echo | Echos the input text. |
+| /bindings | Print IO server manager bindings. |
+| /tagpattern | Tests a block type against a tag pattern. |
+| /interaction | Run interactions like attack, use, abilities, etc. Some of them error out "no root interaction". |
+| /buildertoolslegend | Same thing as toggle builder tools legend keybind. |
+| /debugplayerposition | Prints pos, rot, head rot, and some tp information; spawns a "blue debug thingy" at your position. |
+| /editprefab | It's hard to be 100% sure but this command seems buggy as hell and really just a less functional /prefab. |
+| /hitbox | When given a hitbox id, returns information about the hitbox. |
+| /desyncdamage | Togggles DamageSystems.FilterUnkillable.CAUSE_DESYNC which just makes players not take damage. |
+| /assets | Asset debugging tool. |
+| /blockselect | Loads clipboard with every block in the game. |
 
-## Gameplay
+## Probable Bugs
 | Command | Commentary |
 | --- | --- |
-| /fragment | Adjusts the fragment timer for a fragment world |
-| /voidevent | Immediately triggers the void event in the given fragment world. Seems to also kick the player out of it or shut it down at the moment though |
-| /leave | Leaves the fragment world. Does not work on my multiplayer server but works in singleplayer. |
+| /lighting | For getting and changing the lighting system. The sub command to change the lighting `/lighting calcuation` mistakenly sets the lighting calculation to what it already is and not the value passed in by the user. |
+| /voidevent | Immediately triggers the void event in the given fragment world. Also mistakenly sets the portal world's timer to 1 second (likely thinking or at one point this timer started the void event but this one timer is responsible both for starting the event at 180s and kicking the player out at 0s) which causes the player to immediately get booted out of the world. |
+| /stresstest | Seems like a possibly helpful stress server stress testing command but currently there's an issue with the bots joining the server (happens on my local and multiplayer). |
+| /viewport | Command almost certainly seems bugged. Running the command appears to just regenerate chunks. Reading the source the delete flag does nothing. Probably a dev tool. |
+| /blockset | Lists all block sets without args, errors for a lot of the blocksets that you can put in. |
+| /spawnblock | Spawns a block entity at the specified location. DO NOT USE IF YOU MISSPELL THE BLOCK IT WILL CRASH THE WORLD. |
 
-## Don't know what this is
+### Other Small Bugs
+* `/tp forward` has unfilled placeholder values.
+* `/maxplayers` has unfilled placeholder values.
+
+<!-- TODO: GO OVER -->
+## Untested/Difficulty Testing
 | Command | Commentary |
 | --- | --- |
-| /bindings | No idea |
-| /hitbox | No idea |
-| /desyncdamage | No idea |
-| /blockset | Lists all block sets without args, errors if you put in a valid block set |
-| /stash | Not sure what "container" means because it doesn't seem to work when looking at chests |
-| /assets | Seems like an asset debugging tool |
+| /hitboxcollision | The help appears to indicate this allows you to attach a HitboxCollisionConfig asset to an entity. |
+| /ambience | Manage ambient sound and music. I've always either been in a call or blasting music and have not gotten around to see if this actually does anything. |
+| /path | Control npc pathing. Did not test |
+| /update | Updating assets and prefabs via git. |
+| /backup | Creates a backup of the world if the backup directory is set. |
+| /stash | Can't get it to say anything but "No droplist for container." when hovering over container. |
 | /checkpoint | Related to parkour checkpoints, no idea how to interact with them. |
-| /worldpath | Looks to be an ordered series of waypoints in the world. Not sure what it is used for though |
-| /reputation | No idea |
-| /repulsion | No idea what a repulsion component is |
-| /blockselect | Loads clipboard with every block in the game |
+| /worldpath | Looks to be an ordered series of waypoints in the world. Not sure what it is used for though. |
+| /reputation | Might just be a small isolated plugin that basically just keeps track of arbitrary points that do nothing? I can't figure out if they do something/how to actually get the commands to work. |
+| /repulsion | No idea what a repulsion component does. |
+| /worldgen | Benchmarking command and worldgen config reload command. Maybe the worldgen reload might be needed when working on custom world generation? |
